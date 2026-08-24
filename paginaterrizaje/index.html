@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FastFood - Comida a tu gusto</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            🍔 <span>FastFood</span>
+        </div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#menu">Menú</a>
+            <a href="#como-funciona">¿Cómo funciona?</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+
+    </header>
+
+    <section class="hero" id="inicio">
+
+        <div class="hero-text">
+
+            <p class="subtitulo">🍔 TU COMIDA, A TU MANERA</p>
+
+            <h1>
+                Tu comida Favorita,
+                <span>justo como la quieres</span>
+            </h1>
+
+            <p>
+                Elige tus productos, personaliza tus ingredientes
+                y disfruta de una experiencia rápida y sencilla.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="../iniciosesion/index.html" class="btn-naranja" id="iniciarSesion">Iniciar sesion</a>
+                <a href="../registrodeusuario/index.html" class="btn-boder" id="registrarse">Registrar</a>
+            </div>
+
+        </div>
+
+        <div class="hero-image">
+            <div class="hamburguesa">
+                🍔
+            </div>
+        </div>
+
+    </section>
+
+    <section class="beneficios">
+
+        <div class="beneficio">
+            <span>⚡</span>
+            <h3>Pedidos rápidos</h3>
+            <p>Realiza tu pedido de manera sencilla.</p>
+        </div>
+
+        <div class="beneficio">
+            <span>🍔</span>
+            <h3>A tu gusto</h3>
+            <p>Personaliza los ingredientes de tu comida.</p>
+        </div>
+
+        <div class="beneficio">
+            <span>💳</span>
+            <h3>Pago seguro</h3>
+            <p>Utiliza diferentes métodos de pago.</p>
+        </div>
+
+        <div class="beneficio">
+            <span>📦</span>
+            <h3>Seguimiento</h3>
+            <p>Consulta el estado de tu pedido.</p>
+        </div>
+
+    </section>
+
+    <section class="menu" id="menu">
+
+        <div class="titulo-seccion">
+            <p>DESCUBRE NUESTRO MENÚ</p>
+            <h2>Productos destacados</h2>
+        </div>
+
+        <div class="productos">
+
+            <div class="producto">
+                <div class="producto-img">🍔</div>
+
+                <h3>Hamburguesa Especial</h3>
+
+                <p>
+                    Carne, queso, lechuga, tomate
+                    y nuestra salsa especial.
+                </p>
+
+                <div class="producto-bottom">
+                    <strong>$18.000</strong>
+                    <button onclick="agregarProducto('Hamburguesa Especial')">
+                        Agregar
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <div class="producto-img">🌭</div>
+
+                <h3>Perro Especial</h3>
+
+                <p>
+                    Salchicha, queso, papas, salsas
+                    y toppings a tu elección.
+                </p>
+
+                <div class="producto-bottom">
+                    <strong>$15.000</strong>
+                    <button onclick="agregarProducto('Perro Especial')">
+                        Agregar
+                    </button>
+                </div>
+            </div>
+
+
+            <div class="producto">
+                <div class="producto-img">🍟</div>
+
+                <h3>Combo Familiar</h3>
+
+                <p>
+                    Hamburguesas, papas y bebidas
+                    para compartir.
+                </p>
+
+                <div class="producto-bottom">
+                    <strong>$35.000</strong>
+                    <button onclick="agregarProducto('Combo Familiar')">
+                        Agregar
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="como-funciona" id="como-funciona">
+
+        <div class="titulo-seccion">
+            <p>FÁCIL Y RÁPIDO</p>
+            <h2>¿Cómo funciona?</h2>
+        </div>
+
+        <div class="pasos">
+
+            <div class="paso">
+                <div>1</div>
+                <h3>Elige</h3>
+                <p>Selecciona la comida que quieres.</p>
+            </div>
+
+            <div class="flecha">→</div>
+
+            <div class="paso">
+                <div>2</div>
+                <h3>Personaliza</h3>
+                <p>Agrega o elimina ingredientes.</p>
+            </div>
+
+            <div class="flecha">→</div>
+
+            <div class="paso">
+                <div>3</div>
+                <h3>Confirma</h3>
+                <p>Revisa tu pedido y realiza el pago.</p>
+            </div>
+
+            <div class="flecha">→</div>
+
+            <div class="paso">
+                <div>4</div>
+                <h3>Disfruta</h3>
+                <p>Recibe tu pedido y disfruta.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="promocion">
+
+        <div>
+            <p>🔥 PROMOCIÓN DEL DÍA</p>
+
+            <h2>
+                ¡Tu combo favorito con
+                <span>20% de descuento!</span>
+            </h2>
+
+            <p>
+                Aprovecha nuestra promoción especial
+                por tiempo limitado.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="cta">
+
+        <h2>¿Ya sabes qué quieres comer?</h2>
+
+        <p>
+            Haz tu pedido ahora y disfruta
+            de nuestra comida.
+        </p>
+
+        
+
+    </section>
+
+    <footer id="contacto">
+
+        <div class="footer-logo">
+            🍔 FastFood
+        </div>
+
+        <p>
+            Si querés venir, vení
+        </p>
+
+        <div class="contacto">
+            📱 WhatsApp: +57 3107554934
+            <br>
+            📍 Garzón, Huila
+            <br>
+            🕐 Lunes - Domingo: 10:00 AM - 10:00 PM
+        </div>
+
+        <div class="redes">
+            Instagram · Facebook · WhatsApp
+        </div>
+
+        <hr>
+
+        <p>
+            © 2026 FastFood. Devoloped by pitimay
+        </p>
+
+    </footer>
+
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
