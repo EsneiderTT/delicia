@@ -1,6 +1,3 @@
-/* =========================================
-   CONFIGURACIÓN GENERAL
-========================================= */
 
 * {
     margin: 0;
@@ -24,7 +21,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
 
-    /* Espacio para que el header fijo no tape el contenido */
+ 
     padding-top: 75px;
 }
 
@@ -34,9 +31,7 @@ img {
 }
 
 
-/* =========================================
-   HEADER - SIEMPRE FIJO ARRIBA
-========================================= */
+
 
 header {
     width: 100%;
@@ -83,10 +78,6 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   BOTONES
-========================================= */
-
 .btn-pedido {
     background: #F79B1E;
     color: #1B1B1B;
@@ -104,9 +95,6 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   HERO
-========================================= */
 
 .hero {
     min-height: 600px;
@@ -194,9 +182,7 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   IMAGEN HERO
-========================================= */
+
 
 .hero-image {
     width: 400px;
@@ -219,9 +205,7 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   BENEFICIOS
-========================================= */
+
 
 .beneficios {
     padding: 70px 8%;
@@ -272,9 +256,7 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   TITULOS DE SECCIÓN
-========================================= */
+
 
 .titulo-seccion {
     text-align: center;
@@ -295,9 +277,6 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   MENÚ / PRODUCTOS
-========================================= */
 
 .menu {
     padding: 80px 8%;
@@ -399,9 +378,7 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   CÓMO FUNCIONA
-========================================= */
+
 
 .como-funciona {
     padding: 80px 8%;
@@ -462,9 +439,6 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   PROMOCIÓN
-========================================= */
 
 .promocion {
     padding: 70px 8%;
@@ -518,9 +492,7 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   CTA
-========================================= */
+
 
 .cta {
     padding: 90px 8%;
@@ -561,9 +533,6 @@ nav.desktop-nav a:hover {
 }
 
 
-/* =========================================
-   FOOTER
-========================================= */
 
 footer {
     background: #1B1B1B;
@@ -611,9 +580,7 @@ footer > p:last-child {
 }
 
 
-/* =========================================
-   BOTONES GENERALES
-========================================= */
+
 
 .btn-naranja,
 .btn-boder {
@@ -659,9 +626,7 @@ footer > p:last-child {
 }
 
 
-/* =========================================
-   MENÚ HAMBURGUESA
-========================================= */
+
 
 .menu-toggle {
     width: 48px;
@@ -721,9 +686,6 @@ footer > p:last-child {
 }
 
 
-/* =========================================
-   OVERLAY DEL MENÚ
-========================================= */
 
 .menu-overlay {
     position: fixed;
@@ -891,7 +853,7 @@ body.menu-open {
         height: 48px;
     }
 
-    /* HERO */
+   
 
     .hero {
         width: 100%;
