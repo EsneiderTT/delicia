@@ -1,3 +1,6 @@
+/* =========================================
+   CONFIGURACIÓN GENERAL
+========================================= */
 
 * {
     margin: 0;
@@ -6,6 +9,9 @@
 }
 
 html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
@@ -13,7 +19,24 @@ body {
     font-family: Arial, sans-serif;
     background: #F8F8F8;
     color: #1B1B1B;
+
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    /* Espacio para que el header fijo no tape el contenido */
+    padding-top: 75px;
 }
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================================
+   HEADER - SIEMPRE FIJO ARRIBA
+========================================= */
 
 header {
     width: 100%;
@@ -26,9 +49,11 @@ header {
 
     background: #1B1B1B;
 
-    position: sticky;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+
+    z-index: 9999;
 }
 
 .logo {
@@ -41,22 +66,26 @@ header {
     margin-left: 5px;
 }
 
-nav {
+nav.desktop-nav {
     display: flex;
     gap: 30px;
 }
 
-nav a {
+nav.desktop-nav a {
     color: #FFFFFF;
     text-decoration: none;
     font-size: 15px;
-
     transition: 0.3s;
 }
 
-nav a:hover {
+nav.desktop-nav a:hover {
     color: #F79B1E;
 }
+
+
+/* =========================================
+   BOTONES
+========================================= */
 
 .btn-pedido {
     background: #F79B1E;
@@ -73,6 +102,11 @@ nav a:hover {
     background: #FFB43A;
     transform: scale(1.03);
 }
+
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
     min-height: 600px;
@@ -92,9 +126,7 @@ nav a:hover {
 
 .subtitulo {
     color: #1B1B1B;
-
     font-weight: bold;
-
     margin-bottom: 20px;
 }
 
@@ -122,10 +154,8 @@ nav a:hover {
 
 .hero-buttons {
     display: flex;
-
     gap: 15px;
-
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .btn-principal {
@@ -141,7 +171,6 @@ nav a:hover {
 
 .btn-principal:hover {
     background: #FFB43A;
-
     transform: scale(1.03);
 }
 
@@ -161,10 +190,13 @@ nav a:hover {
 
 .btn-secundario:hover {
     background: #FFFFFF;
-
     color: #1B1B1B;
 }
 
+
+/* =========================================
+   IMAGEN HERO
+========================================= */
 
 .hero-image {
     width: 400px;
@@ -186,6 +218,10 @@ nav a:hover {
     font-size: 180px;
 }
 
+
+/* =========================================
+   BENEFICIOS
+========================================= */
 
 .beneficios {
     padding: 70px 8%;
@@ -227,26 +263,26 @@ nav a:hover {
 
 .beneficio h3 {
     color: #1B1B1B;
-
     margin: 15px 0 10px;
 }
 
 .beneficio p {
     color: #444444;
-
     line-height: 1.5;
 }
 
 
+/* =========================================
+   TITULOS DE SECCIÓN
+========================================= */
+
 .titulo-seccion {
     text-align: center;
-
     margin-bottom: 50px;
 }
 
 .titulo-seccion p {
     color: #F79B1E;
-
     font-weight: bold;
 }
 
@@ -258,9 +294,13 @@ nav a:hover {
     margin-top: 10px;
 }
 
+
+/* =========================================
+   MENÚ / PRODUCTOS
+========================================= */
+
 .menu {
     padding: 80px 8%;
-
     background: #1B1B1B;
 }
 
@@ -338,7 +378,6 @@ nav a:hover {
 
 .producto-bottom strong {
     font-size: 20px;
-
     color: #D77D09;
 }
 
@@ -356,14 +395,16 @@ nav a:hover {
 
 .producto-bottom button:hover {
     background: #FFB43A;
-
     transform: scale(1.03);
 }
 
 
+/* =========================================
+   CÓMO FUNCIONA
+========================================= */
+
 .como-funciona {
     padding: 80px 8%;
-
     background: #F8F8F8;
 }
 
@@ -378,7 +419,6 @@ nav a:hover {
 
 .paso {
     text-align: center;
-
     max-width: 180px;
 }
 
@@ -408,22 +448,23 @@ nav a:hover {
 
 .paso h3 {
     color: #1B1B1B;
-
     margin: 15px 0 8px;
 }
 
 .paso p {
     color: #444444;
-
     line-height: 1.4;
 }
 
 .flecha {
     font-size: 30px;
-
     color: #D77D09;
 }
 
+
+/* =========================================
+   PROMOCIÓN
+========================================= */
 
 .promocion {
     padding: 70px 8%;
@@ -439,7 +480,6 @@ nav a:hover {
 
 .promocion p:first-child {
     color: #1B1B1B;
-
     font-weight: bold;
 }
 
@@ -457,7 +497,6 @@ nav a:hover {
 
 .promocion p {
     line-height: 1.6;
-
     margin-bottom: 25px;
 }
 
@@ -475,10 +514,13 @@ nav a:hover {
 
 .promocion button:hover {
     background: #FFB43A;
-
     transform: scale(1.03);
 }
 
+
+/* =========================================
+   CTA
+========================================= */
 
 .cta {
     padding: 90px 8%;
@@ -498,7 +540,6 @@ nav a:hover {
 
 .cta p {
     color: #444444;
-
     margin-bottom: 25px;
 }
 
@@ -516,10 +557,13 @@ nav a:hover {
 
 .cta button:hover {
     background: #FFB43A;
-
     transform: scale(1.03);
 }
 
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
     background: #1B1B1B;
@@ -551,7 +595,6 @@ footer {
 
 .redes {
     margin: 20px 0;
-
     color: #F79B1E;
 }
 
@@ -567,49 +610,382 @@ footer > p:last-child {
     color: #BDBDBD;
 }
 
+
+/* =========================================
+   BOTONES GENERALES
+========================================= */
+
+.btn-naranja,
+.btn-boder {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    padding: 14px 24px;
+
+    border-radius: 10px;
+
+    transition: 0.25s ease;
+
+    cursor: pointer;
+}
+
+.btn-naranja {
+    background: #1B1B1B;
+    color: #FFFFFF;
+    border: 2px solid #1B1B1B;
+}
+
+.btn-naranja:hover {
+    background: #000000;
+    transform: translateY(-2px);
+}
+
+.btn-boder {
+    background: transparent;
+    color: #1B1B1B;
+    border: 2px solid #1B1B1B;
+}
+
+.btn-boder:hover {
+    background: #1B1B1B;
+    color: #FFFFFF;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   MENÚ HAMBURGUESA
+========================================= */
+
+.menu-toggle {
+    width: 48px;
+    height: 48px;
+
+    padding: 10px;
+
+    border: 2px solid #F79B1E;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.menu-toggle:hover {
+    background: #F79B1E;
+}
+
+.menu-toggle span {
+    width: 23px;
+    height: 3px;
+
+    border-radius: 3px;
+
+    background: #FFFFFF;
+
+    transition: 0.3s;
+}
+
+.menu-toggle:hover span {
+    background: #1B1B1B;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* =========================================
+   OVERLAY DEL MENÚ
+========================================= */
+
+.menu-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 10000;
+}
+
+.menu-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-menu {
+    position: fixed;
+
+    top: 0;
+    right: 0;
+
+    width: min(360px, 88vw);
+
+    height: 100vh;
+
+    padding: 28px;
+
+    background: #1B1B1B;
+
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.35);
+
+    transform: translateX(100%);
+
+    transition: transform 0.35s ease;
+
+    z-index: 10001;
+
+    overflow-y: auto;
+}
+
+.mobile-menu.active {
+    transform: translateX(0);
+}
+
+.mobile-menu-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    color: #FFFFFF;
+
+    font-size: 22px;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #444444;
+}
+
+.menu-close {
+    border: none;
+
+    background: transparent;
+
+    color: #FFFFFF;
+
+    font-size: 38px;
+
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+.mobile-menu nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-top: 25px;
+}
+
+.mobile-menu nav a {
+    padding: 16px 12px;
+
+    border-radius: 8px;
+
+    color: #FFFFFF;
+
+    text-decoration: none;
+
+    font-size: 17px;
+
+    transition: 0.25s;
+}
+
+.mobile-menu nav a:hover {
+    background: #F79B1E;
+    color: #1B1B1B;
+}
+
+.mobile-menu-buttons {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 30px;
+}
+
+.mobile-menu-buttons .btn-naranja,
+.mobile-menu-buttons .btn-boder {
+    width: 100%;
+    text-align: center;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+
 @media (max-width: 900px) {
 
     header {
-        padding: 0 5%;
+        height: 70px;
+        padding: 0 20px;
+        gap: 12px;
     }
 
-    nav {
-        display: none;
+    body {
+        padding-top: 70px;
     }
+
+    header .logo {
+        min-width: 0;
+
+        max-width: calc(100% - 62px);
+
+        overflow: hidden;
+
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+
+        font-size: 22px;
+    }
+
+    nav.desktop-nav {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        flex: 0 0 48px;
+        width: 48px;
+        height: 48px;
+    }
+
+    /* HERO */
 
     .hero {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 55px 20px 50px;
+
         flex-direction: column;
 
-        text-align: center;
+        align-items: center;
+        justify-content: center;
 
-        gap: 50px;
+        gap: 35px;
+
+        text-align: center;
+    }
+
+    .hero-text {
+        width: 100%;
+        max-width: 620px;
+    }
+
+    .subtitulo {
+        font-size: 20px;
+        margin-bottom: 18px;
     }
 
     .hero h1 {
-        font-size: 40px;
+        font-size: clamp(34px, 8vw, 48px);
+
+        line-height: 1.08;
+
+        overflow-wrap: break-word;
+    }
+
+    .hero-text > p:not(.subtitulo) {
+        font-size: 17px;
+        line-height: 1.55;
     }
 
     .hero-buttons {
-        justify-content: center;
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 12px;
+    }
+
+    .hero-buttons a {
+        width: 100%;
     }
 
     .hero-image {
-        width: 280px;
-        height: 280px;
+        width: min(280px, 78vw);
+
+        height: min(280px, 78vw);
+
+        flex: 0 0 auto;
+    }
+
+    .hero-image img {
+        width: 90%;
+
+        height: auto;
+
+        object-fit: contain;
     }
 
     .hamburguesa {
         font-size: 120px;
     }
 
+
+
     .beneficios {
+        width: 100%;
+
+        padding: 50px 20px;
+
         grid-template-columns: repeat(2, 1fr);
     }
+
+
+
 
     .productos {
         grid-template-columns: 1fr;
     }
 
+
+   
     .pasos {
         flex-direction: column;
     }
@@ -617,7 +993,19 @@ footer > p:last-child {
     .flecha {
         transform: rotate(90deg);
     }
+
+
+
+    .menu,
+    .como-funciona,
+    .promocion,
+    .cta,
+    footer {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
+
 
 
 @media (max-width: 600px) {
@@ -627,7 +1015,7 @@ footer > p:last-child {
     }
 
     .hero {
-        padding: 50px 5%;
+        padding: 50px 20px;
     }
 
     .hero h1 {
@@ -654,47 +1042,36 @@ footer > p:last-child {
     .btn-secundario {
         width: 100%;
     }
-
-}
-.hero-buttons {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
 }
 
 
-.btn-naranja {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #0f0e0e;
-    color: white;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
 
 
-.btn-naranja:hover {
-    background-color: #070707;
-    transform: translateY(-2px);
-}
+@media (max-width: 480px) {
 
+    header .logo {
+        font-size: 20px;
+    }
 
-.btn-boder {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: transparent;
-    color: rgb(10, 9, 9);
-    text-decoration: none;
-    border: 2px solid #121211;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s;
-}
+    .hero {
+        padding-top: 42px;
+    }
 
-.btn-boder:hover {
-    background-color: #060606;
-    color: white;
-    transform: translateY(-2px);
+    .subtitulo {
+        font-size: 17px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-image {
+        width: min(260px, 76vw);
+        height: min(260px, 76vw);
+    }
+
+    .mobile-menu {
+        width: min(330px, 88vw);
+        padding: 24px 20px;
+    }
 }

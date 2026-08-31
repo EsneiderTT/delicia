@@ -14,14 +14,38 @@
             🍔 <span>FastFood</span>
         </div>
 
-        <nav>
+        <nav class="desktop-nav">
             <a href="#inicio">Inicio</a>
             <a href="#menu">Menú</a>
             <a href="#como-funciona">¿Cómo funciona?</a>
             <a href="#contacto">Contacto</a>
         </nav>
 
+        <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
     </header>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <aside class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <div class="mobile-menu-header">
+            <strong>🍔 FastFood</strong>
+            <button class="menu-close" id="menuClose" aria-label="Cerrar menú">&times;</button>
+        </div>
+
+        <nav>
+            <a href="#inicio">🏠 Inicio</a>
+            <a href="#menu">🍔 Menú</a>
+            <a href="#como-funciona">⚡ ¿Cómo funciona?</a>
+            <a href="#contacto">📞 Contacto</a>
+        </nav>
+
+       
+    </aside>
 
     <section class="hero" id="inicio">
 
