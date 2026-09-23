@@ -3,11 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delicia Rápida</title>
-    <meta http-equiv="refresh" content="0; url=paginaterrizaje/index.html">
+    <title>Cargando Sabor... | Fast Food</title>
+    <style>
+        /* 1. Estilos Generales de la Página */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #121212; /* Fondo oscuro elegante */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        /* 2. Contenedor de la Animación */
+        .loader-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        /* 3. La Hamburguesa Animada (CSS Puro) */
+        .burger {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .ingredient {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: dropIn 2s ease-in-out infinite;
+        }
+
+        /* Pan Superior */
+        .top-bun {
+            width: 80px;
+            height: 35px;
+            background: #E2933C;
+            border-radius: 40px 40px 10px 10px;
+            top: 5px;
+            animation-delay: 0.2s;
+        }
+
+        /* Lechuga */
+        .lettuce {
+            width: 85px;
+            height: 10px;
+            background: #62B846;
+            border-radius: 5px;
+            top: 42px;
+            animation-delay: 0.5s;
+        }
+
+        /* Queso Derretido */
+        .cheese {
+            width: 82px;
+            height: 8px;
+            background: #FFD43F;
+            border-radius: 2px;
+            top: 52px;
+            animation-delay: 0.8s;
+        }
+
+        /* Carne */
+        .meat {
+            width: 80px;
+            height: 18px;
+            background: #59351F;
+            border-radius: 8px;
+            top: 60px;
+            animation-delay: 1.1s;
+        }
+
+        /* Pan Inferior */
+        .bottom-bun {
+            width: 78px;
+            height: 15px;
+            background: #E2933C;
+            border-radius: 5px 5px 15px 15px;
+            top: 78px;
+            animation-delay: 1.4s;
+        }
+
+        /* 4. Efecto de Caída de Ingredientes */
+        @keyframes dropIn {
+            0% {
+                transform: translate(-50%, -60px);
+                opacity: 0;
+            }
+            30%, 70% {
+                transform: translate(-50%, 0);
+                opacity: 1;
+            }
+            100% {
+                transform: translate(-50%, 40px);
+                opacity: 0;
+            }
+        }
+
+        /* 5. Texto de Carga */
+        .loading-text {
+            color: #FFD43F; /* Amarillo mostaza */
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: pulse 1.5s infinite ease-in-out;
+            text-shadow: 0px 4px 10px rgba(255, 212, 63, 0.2);
+        }
+
+        .loading-text span {
+            color: #FF4A4A; /* Rojo kétchup para destacar */
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1.02); }
+        }
+    </style>
 </head>
 <body>
+
+    <div class="loader-container">
+        <!-- Hamburguesa que se arma sola -->
+        <div class="burger">
+            <div class="ingredient top-bun"></div>
+            <div class="ingredient lettuce"></div>
+            <div class="ingredient cheese"></div>
+            <div class="ingredient meat"></div>
+            <div class="ingredient bottom-bun"></div>
+        </div>
+        
+        <!-- Texto de carga interactivo -->
+        <div class="loading-text">Preparando tu <span>orden</span>...</div>
+    </div>
     <p>Cargando Delicia Rápida...</p>
     <p><a href="paginaterrizaje/index.html">Entrar al sitio</a></p>
+    <script>
+        setTimeout(function() {
+            window.location.href = "paginaterrizaje/index.html";
+        }, 4000);
+    </script>
+
 </body>
 </html>
